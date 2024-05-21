@@ -20,7 +20,7 @@ export default function Signup() {
   }
 
   async function signupDetail() {
-    const respons = await fetch("http://localhost:2000/api/creatuser", {
+    const respons = await fetch("https://e-comm-backend-qal7.onrender.com/api/creatuser", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

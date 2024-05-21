@@ -35,7 +35,7 @@ const App = () => {
     const fetchCartData = async () => {
       try {
         const response = await axios.post(
-          "http://localhost:2000/api/getcartproduct",
+          "https://e-comm-backend-qal7.onrender.com/api/getcartproduct",
           { id: uid }
         );
         setCartProduct(response.data.data.cartProducts);
@@ -51,7 +51,7 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:2000/api/getproducts")
+      .get("https://e-comm-backend-qal7.onrender.com/api/getproducts")
       .then((res) => {
         Setdata(res.data);
         SetRecord(res.data);

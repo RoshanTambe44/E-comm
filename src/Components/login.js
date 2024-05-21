@@ -17,7 +17,7 @@ export default function Login({ setHandlebtn, setUname, setUid, setRoll }) {
   async function loginDetail(e) {
     e.preventDefault();
 
-    const respons = await fetch(`http://localhost:2000/api/loginuser`, {
+    const respons = await fetch(`https://e-comm-backend-qal7.onrender.com/api/loginuser`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

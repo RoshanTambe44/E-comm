@@ -31,7 +31,7 @@ export default function Addproduct({uid}) {
       return alert("insert image URL")
     }
     else{
-    const respons = await fetch('http://localhost:2000/api/addproduct', {
+    const respons = await fetch('https://e-comm-backend-qal7.onrender.com/api/addproduct', {
       method:"POST",
       headers:{
         "Content-Type" : "application/json"

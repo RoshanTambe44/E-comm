@@ -19,7 +19,7 @@ export default function Adminpage({uid, uname}) {
   const saveChanges = async () => {
 
     if (window.confirm("Confirm")) {
-      await fetch("http://localhost:2000/api/edituser", {
+      await fetch("https://e-comm-backend-qal7.onrender.com/api/edituser", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id: editID, roll:editRoll }),
@@ -32,7 +32,7 @@ export default function Adminpage({uid, uname}) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:2000/api/getusers");
+        const response = await axios.get("https://e-comm-backend-qal7.onrender.com/api/getusers");
         setUsers(response.data);
       } catch (error) {
         console.error("Error fetching users:", error);
@@ -47,7 +47,7 @@ export default function Adminpage({uid, uname}) {
 
   const removeUserfunc = async (id) => {
     if (window.confirm("Are you confirm")) {
-      await fetch("http://localhost:2000/api/removeuser", {
+      await fetch("https://e-comm-backend-qal7.onrender.com/api/removeuser", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id: id }),

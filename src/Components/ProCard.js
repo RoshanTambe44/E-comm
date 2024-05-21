@@ -108,7 +108,7 @@ const ProCard = ({
           updatedProducts,
         ]);
 
-        await fetch("http://localhost:2000/api/addcartproduct", {
+        await fetch("https://e-comm-backend-qal7.onrender.com/api/addcartproduct", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ id: uid, cartProducts: updatedProducts }),
